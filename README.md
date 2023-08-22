@@ -18,4 +18,4 @@ El siguiente código contiene la parte del programa en donde se realizan los cá
 
 [proyecto.py](proyecto.py)
 
-`python proyecto.py`
+```python proyecto.py```

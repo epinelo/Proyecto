@@ -6,8 +6,8 @@ En el programa que estoy trabajando, habrá una sección en la que el usuario po
 
 Para la realización de estos calculos, he agregado las siguientes operaciones al programa:
 
-Cálculo del total sin propina:
-  total = (precio_taco * cantidad_tacos) + precio_agua + precio_extra
+> Cálculo del total sin propina:
+>> total = (precio_taco * cantidad_tacos) + precio_agua + precio_extra
 
-Cálculo del total con propina:
-  total = (total * (porcentaje / 100)) + total
+> Cálculo del total con propina:
+>> total = (total * (porcentaje / 100)) + total

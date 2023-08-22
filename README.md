@@ -16,4 +16,4 @@ Para la realización de estos calculos, he agregado las siguientes operaciones a
 
 El siguiente código contiene la parte del programa en donde se realizan los cáculos ya mencionados:
 
-[Enlace a mi archivo](proyecto.py)
+

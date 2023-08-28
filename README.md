@@ -15,3 +15,4 @@ Para la realización de estos calculos, he agregado las siguientes operaciones a
 >>total = (total * (porcentaje / 100)) + total
 
 El siguiente código contiene la parte del programa en donde se realizan los cáculos ya mencionados: [proyecto.py](proyecto.py)
+## Funciones (Avance 3)

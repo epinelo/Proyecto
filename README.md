@@ -19,4 +19,17 @@ Para la realización de estos cálculos, he agregado las siguientes operaciones 
 ## Funciones (Avance 3)
 Como se ha mencionado anteriormente, el programa hará distintas tareas para completar un pedido, como mostrar la carta, resgistrar los productos seleccionados, calcular el total, la propina y confirmar la orden. Declararé una serie de funciones, una para cada tarea, para la facilidad de lectura del código y la realización de cada tarea. 
 
+Agregue al código las siguientes funciones:
+
+>Mostrar_Menu
+>Opcion_Menu
+>Mostrar_Carta
+>Realizar_Pedido
+>Confirmacion_Pedido_Propina
+>Confirmacion_Pedido
+>Finalizar_Pedido
+>Complemento
+>Total
+>Propina
+
 El siguiente código contiene la parte del programa con las funciones declaradas: [proyecto.py](proyecto.py)

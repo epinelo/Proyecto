@@ -4,9 +4,11 @@ Para este proyecto, he decidio basarme en aplicaciones de entrega de alimentos c
 ## Operadores (Avance 2)
 En el programa que estoy trabajando, habrá una sección en la que el usuario podrá consultar cuánto deberá pagar después de realizar su orden, por lo que incluiré operadores para realizar algunos cálculos. Estos cálculos son la suma de los precios de los productos seleccionados, y en caso de que el usuario deseé agregar propina, se hará un segundo cálculo para arrogar el total después de agregar el porcentaje de propina deseado.
 
-Para la realización de estos calculos, he agregado las siguientes operaciones al programa:
+Para este avance realicé un código prueba que hace el trabajo de los cálculos de la cuenta total, con o sin propina, del pedido realizado. Al correr el código se pide el ingreso de los productos deseados y sus características (sabor, tamaño, cantidad, precio). Luego, se pregunta al usuario si desea agregar un complemento a su orden, dando dos opciones. El programa buscará un "si" por respuesta (sin importar las mayúsculas o minúsculas) en caso de el usuario deseé un complemento. Si obtiene un "si" por respuesta, se pedirá el complemento y su precio, y calculará el total a pagar agregando el costo del complemento a la cuenta. Si el prgrama no encuentra un "si" por respuesta, seguirá con el código. Después se preguntará al usuario si desea agregar propina. Al igual que la parte del complemento, si el programa recibe un "si" por respuesta, pedirá el ingreso de la propina el porcentaje, calculará la propina, la agregará a la cuenta e imprimirá el total del pedido. Si no desea agregar propina, solo imprimirá el total.
 
->Cálculo del total sin propina:
+Para la realización de estos cálculos, he agregado las siguientes operaciones al programa:
+
+>Cálculo del total sin propina (con complemento):
 >
 >>total = (precio_taco * cantidad_tacos) + precio_agua + precio_extra
 
@@ -14,6 +16,7 @@ Para la realización de estos calculos, he agregado las siguientes operaciones a
 >
 >>total = (total * (porcentaje / 100)) + total
 
-El siguiente código contiene la parte del programa en donde se realizan los cáculos ya mencionados: [proyecto.py](proyecto.py)
 ## Funciones (Avance 3)
 Como se ha mencionado anteriormente, el programa hará distintas tareas para completar un pedido, como mostrar el menú, resgistrar los productos seleccionados, calcular el total, la propina y confirmar la orden. Declararé una serie de funciones, una para cada tarea, para la facilidad de lectura del código y la realización de cada tarea. 
+
+El siguiente código contiene la parte del programa con las funciones declaradas: [proyecto.py](proyecto.py)

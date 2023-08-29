@@ -21,24 +21,24 @@ Como se ha mencionado anteriormente, el programa hará distintas tareas para com
 
 Agregue al código las siguientes funciones:
 
->Mostrar_Menu
+>Mostrar_Menu: Función que muestra el Menú de opciones.
 >
->Opcion_Menu
+>Opcion_Menu: Función que evalua la opción dada por el usuario.
 >
->Mostrar_Carta
+>Mostrar_Carta: Función que muestra la carta de productos y precios de la taquería.
 >
->Realizar_Pedido
+>Realizar_Pedido: Función que se encarga de registrar el pedido mediante inputs y, haciendo uso de otras funciones, calcula el total tomando en cuenta si el usuario elijó algún complemento y/o decidió agregar propina.
 >
->Confirmacion_Pedido_Propina
+>Confirmacion_Pedido_Propina: Función que imprime la confirmación del pedido si el usuario decidió agregar propina.
 >
->Confirmacion_Pedido
+>Confirmacion_Pedido: Función que imprime la confirmación del pedido si el usuario decidió no agregar propina.
 >
->Finalizar_Pedido
+>Finalizar_Pedido: Función que imprime un mensaje de confirmación, y además muestra la encuesta de servicio, donde se calificará el servicio en una escala del 1 al 5.
 >
->Complemento
+>Complemento: Función que realiza el cálculo del total del pedido con complemento.
 >
->Total
+>Total: Función que realiza el cálculo del total del pedido sin complemento.
 >
->Propina
+>Propina: Función que realiza el cálculo del total del pedido con propina.
 
 El siguiente código contiene la parte del programa con las funciones declaradas: [proyecto.py](proyecto.py)

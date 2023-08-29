@@ -35,7 +35,7 @@ Agregue al código las siguientes funciones:
 >
 >Finalizar_Pedido: Función que imprime un mensaje de confirmación, y además muestra la encuesta de servicio, donde se calificará el servicio en una escala del 1 al 5.
 >
->Complemento: Función que realiza el cálculo del total del pedido con complemento.
+>**Complemento**: Función que realiza el cálculo del total del pedido con complemento.
 >
 >Total: Función que realiza el cálculo del total del pedido sin complemento.
 >

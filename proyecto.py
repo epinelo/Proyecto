@@ -65,8 +65,8 @@ def Realizar_Pedido() :
     tamaño_agua = input('¿De que tamaño deseas tu agua? ')
     precio_agua = float(input('¿Cuánto cuesta tu agua? '))
 
-    extra = input('¿Deseas complementar con chicharrón de queso o cebollas \
-                    preparadas? ')
+    extra = input(
+    '¿Deseas complementar con chicharrón de queso o cebollas preparadas? ')
     if extra.lower() == 'si' :
         print()
         print('Chicarrón de queso ------------- $45')
@@ -78,8 +78,8 @@ def Realizar_Pedido() :
                             precio_extra)
         propina = input('¿Deseas agregar propina? ')
         if propina.lower() == 'si' :
-            porcentaje = float(input('¿Cuánto deseas agregar? (Introduce el \
-                                        porcentaje, sin símbolos) '))
+            porcentaje = float(input(
+            '¿Cuánto deseas agregar? (Introduce el porcentaje, sin símbolos) '))
             tot = Propina(porcentaje, tot)
             Confirmacion_Pedido_Propina(sabor_taco, cantidad_tacos, sabor_agua,
                                 tamaño_agua, extra, porcentaje, propina, tot)
@@ -90,8 +90,8 @@ def Realizar_Pedido() :
         tot = Total(precio_taco, cantidad_tacos, precio_agua)
         propina = input('¿Deseas agregar propina? ')
         if propina.lower() == 'si' :
-            porcentaje = float(input('¿Cuánto deseas agregar? (Introduce el \
-                                        porcentaje, sin símbolos) '))
+            porcentaje = float(input(
+            '¿Cuánto deseas agregar? (Introduce el porcentaje, sin símbolos) '))
             tot = Propina(porcentaje, tot)
             Confirmacion_Pedido_Propina(sabor_taco, cantidad_tacos, sabor_agua,
                                 tamaño_agua, extra, porcentaje, propina, tot)
@@ -112,8 +112,8 @@ def Confirmacion_Pedido_Propina(sabor_taco, cantidad_tacos, sabor_agua,
     print('CONFIRMACIÓN: ')
     print(cantidad_tacos, 'tacos de', sabor_taco)
     print('Agua', tamaño_agua, 'de', sabor_agua)
-    if extra.lower() == 'chicharrón de queso' or extra.lower() == 'cebollas \
-                                                                preparadas' :
+    if (extra.lower() == 'chicharrón de queso' or
+    extra.lower() == 'cebollas preparadas'):
         print(extra)
     else:
         print('Sin complemento')
@@ -133,8 +133,8 @@ def Confirmacion_Pedido(sabor_taco, cantidad_tacos, sabor_agua, tamaño_agua,
     print('CONFIRMACIÓN: ')
     print(cantidad_tacos, 'tacos de', sabor_taco)
     print('Agua', tamaño_agua, 'de', sabor_agua)
-    if extra.lower() == 'chicharrón de queso' or extra.lower() == 'cebollas \
-                                                                preparadas' :
+    if (extra.lower() == 'chicharrón de queso' or
+    extra.lower() == 'cebollas preparadas'):
         print(extra)
     else:
         print('Sin complemento')

@@ -16,9 +16,9 @@ def Opcion_Menu(opc) :
 
     if opc == '1' :
         Mostrar_Carta()
-    if opc == '2' :
+    elif opc == '2' :
         Realizar_Pedido()
-    if opc == '3' :
+    elif opc == '3' :
         Finalizar_Pedido()
     else :
         print('Número inválido, intenta de nuevo.')
@@ -162,6 +162,7 @@ def Finalizar_Pedido() :
         print('Gracias por calificar nuestro servicio.')
     if calif == '5' :
         print('¡Gracias! Nos da gusto que hayas recibido un buen servicio.')
+        return
 
 def Complemento(precio_taco, cantidad_tacos, precio_agua, precio_extra) :
 

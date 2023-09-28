@@ -47,9 +47,7 @@ En las funciones principales, declaradas dentro del código de mi programa, util
 ## Estructuras de repetición (Avance 5)
 En mi código de python incorporé estructuras 'while' en algunas de las funciones que se utilizan en el programa. El primer ciclo while lo utilizo para que el usuario pueda seguir interactuando con el Menú las veces que deseé hasta que se finalice el pedido. En el siguiente ciclo, dentro de la función Realizar_Pedido, se inicia un ciclo while infinito y se utiliza para permitir que el usuario tome múltiples elementos del pedido sin tener que volver al menú principal después de cada elemento. El programa pregunta al usuario si desea agregar tacos a su pedido. Si el usuario responde "si", se toman los detalles del pedido de tacos, se calcula el costo y se suma al total. Si responde "no", se establecen las variables relacionadas con tacos en None y 0. Luego, el programa hace una pregunta similar para las bebidas y los complementos. Toma los detalles del pedido, calcula los costos y los suma al total_pedido. Finalmente, se pregunta al usuario si desea agregar más elementos al pedido. Si responde "si", el bucle continúa y se repite el proceso para agregar otro elemento. Si responde "no", se rompe el bucle while y el programa vuelve al menú.
 
+## Listas y Diccionarios (Avance 6)
+
+
 El siguiente código contiene la parte del programa con las estructuras de repetición: [proyecto.py](proyecto.py)
-
-## Avance 6 (comenzado)
-Adicionalmente, comencé con la incorporación de diccionarios dentro del código para almacenar el precio de cada uno de los productos de la taquería. Hice uso de la función get() en la función de Realizar_Pedido para acceder a los valores de los diccionarios. Y también, utilice cadenas f para la impresión de la confirmación del pedido. 
-
-**NOTA**: En algunos casos específicos al realizar el pedido, el programa no responde correctamente. Esto debido a que no terminé correctamente con la incorporación de estos diccionarios. Lo seguiré trabajando para el siguiente avance (Avance 6), mejorando los diccionarios, impresiones, agregando listas y/o más ciclos si es necesario. 

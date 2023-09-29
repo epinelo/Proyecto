@@ -1,3 +1,5 @@
+# -------------------------LISTAS Y DICCIONARIOS-------------------------------
+
 tacos = {'PA': 10, 'CHO': 15, 'SUA': 25, 'LEN': 30, 'BI': 10, 'CO': 45}
 
 lista_tacos = ['PA', 'CHO', 'SUA', 'LEN', 'BI', 'CO']
@@ -23,6 +25,8 @@ nombres_t_a = {'G': 'grande', 'M': 'mediana', 'CH': 'chica'}
 nombres_c = {'CQ': 'Chicarrón de queso', 'CP': 'Cebollas preparadas',
 'NO': 'Nopales', 'GUA': 'Guacamole', 'FRI': 'Frijoles'}
 
+# ----Función que muestra el menú y evalúa la opción elegida por el usuario----
+
 def Mostrar_Menu(tacos, tamaños_aguas, complementos):
 
     while True:
@@ -42,9 +46,9 @@ def Mostrar_Menu(tacos, tamaños_aguas, complementos):
         else:
             print('Número inválido, intenta de nuevo.')
 
-def Mostrar_Carta(tacos, tamaños_aguas, complementos) :
+# -----Función que muestra la carta de productos y precios de la taquería------
 
-    # Función que muestra la carta de productos y precios de la taquería.
+def Mostrar_Carta(tacos, tamaños_aguas, complementos) :
 
     print()
     print('TACOS')
@@ -76,14 +80,19 @@ def Mostrar_Carta(tacos, tamaños_aguas, complementos) :
 
     Mostrar_Menu(tacos, tamaños_aguas, complementos)
 
+# -----------------Función con inputs para realizar el pedido------------------
+
 def Realizar_Pedido(tacos, tamaños_aguas, complementos):
-    # Inicializar variables para el pedido
+
     total_pedido = 0  # Inicializamos el total del pedido en cero
 
     print()
     print(
     'FAVOR DE UTILIZAR LOS CÓDIGOS DE CADA PRODUCTO PARA REALIZAR SU PEDIDO',
           '(E.G. Taco de Pastor: PA)')
+
+    # Ciclos while True, condicionales if y try/excpet para la verificación de
+    # las respuestas del usuario.
 
     while True:
         taco_o_no = input('¿Desea agregar tacos a su orden? ')
@@ -160,6 +169,7 @@ def Realizar_Pedido(tacos, tamaños_aguas, complementos):
         else :
             porcentaje = 0
 
+        # Se llama a la función Confirmación_Pedido.
         Confirmacion_Pedido(tacos, tamaños_aguas, complementos,
         nombres_c, nombres_t, nombres_t_a, sabor_taco, sabor_agua, tamaño_agua,
         extra, cantidad_agua, cantidad_tacos, propina, porcentaje, total_pedido,
@@ -169,7 +179,7 @@ def Realizar_Pedido(tacos, tamaños_aguas, complementos):
         continuar_pedido = input(
         '¿Desea agregar más elementos al pedido? (si/no) ')
         if continuar_pedido.lower() != 'si':
-            break  # Sal del bucle si no se desea agregar más elementos
+            break
 
         Mostrar_Menu(tacos, tamaños_aguas, complementos)
 
@@ -201,11 +211,16 @@ def Finalizar_Pedido() :
         else :
             print('Número inválido, intenta de nuevo.')
 
+# ---------------Función que imprime la confirmación del pedido----------------
+
 def Confirmacion_Pedido(tacos, tamaños_aguas, complementos,
 nombres_c, nombres_t, nombres_t_a, sabor_taco, sabor_agua, tamaño_agua, extra,
 cantidad_agua, cantidad_tacos, propina, porcentaje, total_pedido,
 aguas) :
-    # Imprime la confirmación del pedido
+
+    # Uso de la función get() para obtener los valores/precios de los productos
+    # y los nombres de los códigos.
+
     print()
     print('CONFIRMACIÓN: ')
     if sabor_taco :

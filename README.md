@@ -52,7 +52,8 @@ Incorporé al código una serie de listas y además unos cuantos diccionarios. E
 
 El siguiente código contiene la parte del programa con las listas y diccionarios: [proyecto.py](proyecto.py)
 
-## NOTA
+**NOTA:
+
 Con relación al Avance 4 y 5, agregué más ciclos while junto con condicionales para verificar las respuestas del usuario. Por ejemplo, cuando se pregunta por el sabor del taco, si el usuario introduce un código que no se encuentra en la carta (en las listas), se le pedirá una vez más que ingrese el sabor del taco. Otro ejemplo es cuando se pregunta por la cantidad de tacos. Si el usuario introduce algo que no sea un número, se mostrará un mensaje de error y se pedirá de nuevo la cantidad de tacos. Esto mediante el uso de un try/except, que intenta convertir el input a entero, y si no funciona, quiere decir que el usuario introdujo algo que no es un número.
 
 También desheché algunas de las funciones que había creado, como las fucniones que calculaban el total y las dos funciones de confirmación de pedido. En su lugar, declaré una variable total_pedido dentro de la función Realizar_Pedido que va cambiando según lo que el usuario va agregando a su pedido. Esto me ayudó a simplificar las dos funciones que tenía de confirmación de pedido (Confirmacion_Pedido y Confirmacion_Pedido_Propina) a una sola función de confirmación de pedido.

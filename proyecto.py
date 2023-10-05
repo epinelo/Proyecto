@@ -1,21 +1,18 @@
 # -------------------------LISTAS Y DICCIONARIOS-------------------------------
 
-tacos = {'PA': 10, 'CHO': 15, 'SUA': 25, 'LEN': 30, 'BI': 10, 'CO': 45}
+productos = [['PA', 'CHO', 'SUA', 'LEN', 'BI', 'CO'], ['HO', 'JA', 'LI', 'TA'],
+['CQ', 'CP', 'NO', 'GUA', 'FRI']]
 
-lista_tacos = ['PA', 'CHO', 'SUA', 'LEN', 'BI', 'CO']
+tacos = {'PA': 10, 'CHO': 15, 'SUA': 25, 'LEN': 30, 'BI': 10, 'CO': 45}
 
 aguas = {'HO': 'horchata', 'JA': 'jamaica', 'LI': 'limón',
 'TA': 'tamarindo'}
-
-lista_aguas = ['HO', 'JA', 'LI', 'TA']
 
 tamaños_aguas = {'G': 30, 'M': 17, 'CH': 10}
 
 lista_tamaños_aguas = ['G', 'M', 'CH']
 
 complementos = {'CQ': 45, 'CP': 25, 'NO': 30, 'GUA': 40, 'FRI': 20}
-
-lista_complementos = ['CQ', 'CP', 'NO', 'GUA', 'FRI']
 
 nombres_t = {'PA': 'pastor', 'CHO': 'chorizo', 'SUA': 'suadero',
 'LEN': 'lengua', 'BI': 'bistec', 'CO': 'cochinita'}
@@ -99,7 +96,7 @@ def Realizar_Pedido(tacos, tamaños_aguas, complementos):
         if taco_o_no.lower() == 'si':
             while True :
                 sabor_taco = input('Sabor de taco: ')
-                if sabor_taco not in lista_tacos :
+                if sabor_taco not in productos[0] :
                     print('Código inválido, intente de nuevo.')
                 else :
                     while True :
@@ -119,7 +116,7 @@ def Realizar_Pedido(tacos, tamaños_aguas, complementos):
         if agua_o_no.lower() == 'si':
             while True :
                 sabor_agua = input('Sabor de agua: ')
-                if sabor_agua not in lista_aguas :
+                if sabor_agua not in productos[1] :
                     print('Código inválido, intente de nuevo.')
                 else :
                     while True :
@@ -147,7 +144,7 @@ def Realizar_Pedido(tacos, tamaños_aguas, complementos):
         if extra_o_no.lower() == 'si':
             while True :
                 extra = input('Complemento: ')
-                if extra not in lista_complementos :
+                if extra not in productos[2] :
                     print('Código inválido, intente de nuevo.')
                 else :
                     total_pedido += complementos.get(extra, 0)
@@ -250,4 +247,6 @@ aguas) :
         print('Cuenta cerrada')
     print('Total:', total_pedido)
 
+print()
+print('-------------------------TAQUERÍA TEC-------------------------')
 Mostrar_Menu(tacos, tamaños_aguas, complementos)

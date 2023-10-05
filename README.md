@@ -57,6 +57,9 @@ Con relación al Avance 4 y 5, agregué más ciclos while junto con condicionale
 También desheché algunas de las funciones que había creado, como las fucniones que calculaban el total y las dos funciones de confirmación de pedido. En su lugar, declaré una variable total_pedido dentro de la función Realizar_Pedido que va cambiando según lo que el usuario va agregando a su pedido. Esto me ayudó a simplificar las dos funciones que tenía de confirmación de pedido (Confirmacion_Pedido y Confirmacion_Pedido_Propina) a una sola función de confirmación de pedido.
 
 ## Listas Anidadas (Avanace 7)
+Las listas que tenía con los códigos de cada producto, las cuales utilizo para la verificación de la entrada del ususario al seleccionar un producto, las junte en una matriz. Por lo tanto, en la función Realizar_Pedido, al hacer la verificación, en lugar de consultar en listas separadas, me dirijo al índice (de la matriz 'productos') de la lista a consultar. 
 
+**Antes:** if sabor_taco not in lista_tacos :
+**Después:** if sabor_taco not in productos[0] :
 
-El siguiente código contiene la parte del programa con las listas y diccionarios: [proyecto.py](proyecto.py)
+El siguiente código contiene la parte del programa con las listas anidadas: [proyecto.py](proyecto.py)

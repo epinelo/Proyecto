@@ -50,10 +50,13 @@ En mi código de python incorporé estructuras 'while' en algunas de las funcion
 ## Listas y Diccionarios (Avance 6)
 Incorporé al código una serie de listas y además unos cuantos diccionarios. El uso que le di a los diccionarios fue la asignación de los precios a cada uno de los productos de la carta y así, mediante el uso de la función get(), obtener los valores/precios de cada producto. Para facilitar la realización del pedido, le asigné un "código" de dos a tres letras para referirse a cada producto. Otra función de algunos diccionarios fue para asignarle su nombre completo a cada código. Esto para que, en las impresiones de la confirmación del pedido, se imprimiera el nombre del producto en lugar del código. Cada código tiene un valor/precio asignado. Por otro lado, las listas son simplemente para verificar si existe el código que el usuario ingresa para referirse a cierto producto. En las listas estan todos los códigos de todos los productos, por lo que si el usuario ingresa alguna otra opción, marcará un error y volverá a preguntar por la respuesta del usuario.
 
-El siguiente código contiene la parte del programa con las listas y diccionarios: [proyecto.py](proyecto.py)
-
-**NOTA:
+**NOTA:**
 
 Con relación al Avance 4 y 5, agregué más ciclos while junto con condicionales para verificar las respuestas del usuario. Por ejemplo, cuando se pregunta por el sabor del taco, si el usuario introduce un código que no se encuentra en la carta (en las listas), se le pedirá una vez más que ingrese el sabor del taco. Otro ejemplo es cuando se pregunta por la cantidad de tacos. Si el usuario introduce algo que no sea un número, se mostrará un mensaje de error y se pedirá de nuevo la cantidad de tacos. Esto mediante el uso de un try/except, que intenta convertir el input a entero, y si no funciona, quiere decir que el usuario introdujo algo que no es un número.
 
 También desheché algunas de las funciones que había creado, como las fucniones que calculaban el total y las dos funciones de confirmación de pedido. En su lugar, declaré una variable total_pedido dentro de la función Realizar_Pedido que va cambiando según lo que el usuario va agregando a su pedido. Esto me ayudó a simplificar las dos funciones que tenía de confirmación de pedido (Confirmacion_Pedido y Confirmacion_Pedido_Propina) a una sola función de confirmación de pedido.
+
+## Listas Anidadas (Avanace 7)
+
+
+El siguiente código contiene la parte del programa con las listas y diccionarios: [proyecto.py](proyecto.py)

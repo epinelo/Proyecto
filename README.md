@@ -1,3 +1,4 @@
+Emilio Pinelo Landarte - A01710103
 # TC 1028.414 Proyecto - TAQUERÍA TEC
 ## CONTEXTO (Avance 1)
 Para este proyecto, he decidio basarme en aplicaciones de entrega de alimentos como Rappi, Uber eats, Didi food, etc. El programa desplegará un menú de opciones. En el menú, tendrás la opción de observar la carta de una taquería, en la que se ofrecerá una variedad de sabor de tacos, sabores y tamaños de agua, y complementos como cebollas preparadas y chicharrón de queso para realizar un pedido. En la carta se mostrarán todos los productos y sus precios. La segunda opción del menú será continuar con la realización de tu pedido, donde ingresarás los productos que deseas. Al terminar con tu pedido se preguntará sobre la propina, en caso de agregar propina, se calculará el porcentaje deseado. La tercera opción hará una confirmación y mostrará el total, con o sin propina. Finalmente, el programa terminará con tu pedido con una encuesta de servicio.

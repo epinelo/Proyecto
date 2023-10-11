@@ -71,5 +71,6 @@ Para el cierre de este proyecto, realicé las últimas y pequeñas modificacione
 
 El siguiente código contiene el programa final del proyecto: [proyecto.py](proyecto.py)
 
-**Puntos de la retroalimentación becaria corregidos**
+**Puntos de la retroalimentación becaria corregidos:**
+
 En el Avance 5 (Estructuras de repetición), además de agregar ciclos, también agregue los diccionarios del siguiente avance (Avance 6). Al hacer esto, los ciclos que agrgue al código entraron en conflicto con los diccionarios y los condicionales. Hubo problemas con algunas impresiones y había ciclos infinitos. Incluso había casos en los que al correr el programa, al empezar con las entradas del usuario, el programa marcaba errores o no compilaba. Todos esto lo corregí entre los últimos avances (Avance 6 y 7).

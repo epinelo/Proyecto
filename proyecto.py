@@ -1,4 +1,15 @@
-# -------------------------LISTAS Y DICCIONARIOS-------------------------------
+'''
+Proyecto Python - TC1028
+Emilio Pinelo Landrate - A01710103
+Servicio de comida (Taquería TEC)
+El programa lleva a cabo el pedido de un usuario a una taquería. Muestra un
+menú de opciones a elegir para completar el pedido. Al terminar un pedido
+imprime la confirmación y cuenta total.
+'''
+
+'''
+========================== Listas y Diccionarios ===============================
+'''
 
 productos = [['PA', 'CHO', 'SUA', 'LEN', 'BI', 'CO'], ['HO', 'JA', 'LI', 'TA'],
 ['CQ', 'CP', 'NO', 'GUA', 'FRI']]
@@ -22,9 +33,19 @@ nombres_t_a = {'G': 'grande', 'M': 'mediana', 'CH': 'chica'}
 nombres_c = {'CQ': 'Chicarrón de queso', 'CP': 'Cebollas preparadas',
 'NO': 'Nopales', 'GUA': 'Guacamole', 'FRI': 'Frijoles'}
 
-# ----Función que muestra el menú y evalúa la opción elegida por el usuario----
+'''
+=============================== Funciones ======================================
+'''
 
-def Mostrar_Menu(tacos, tamaños_aguas, complementos):
+def Mostrar_Menu():
+
+    '''
+    (Uso de ciclo while, condicionales, funciones)
+    Recibe: no recibe ningún valor.
+    Muestra el menú y evalúa la opción elegida por el usuario.
+    Según la opción elegida, se hará uso de la función correspondiente.
+    Devuelve: no devuelve ningun valor.
+    '''
 
     while True:
         print()
@@ -34,18 +55,24 @@ def Mostrar_Menu(tacos, tamaños_aguas, complementos):
         print('3. Finalizar')
         opc = input('Seleccione una opción: ')
 
-        if opc == '1':
-            Mostrar_Carta(tacos, tamaños_aguas, complementos)
-        elif opc == '2':
+        if (opc == '1') :
+            Mostrar_Carta()
+        elif (opc == '2') :
             Realizar_Pedido(tacos, tamaños_aguas, complementos)
-        elif opc == '3':
+        elif (opc == '3') :
             Finalizar_Pedido()
         else:
             print('Número inválido, intenta de nuevo.')
 
-# -----Función que muestra la carta de productos y precios de la taquería------
+def Mostrar_Carta() :
 
-def Mostrar_Carta(tacos, tamaños_aguas, complementos) :
+    '''
+    (Uso de funciones)
+    Recibe: no recibe ningún valor
+    Muestra la carta de productos y precios de la taquería y regresa al menú
+    haciendo uso de la función de Mostrar_Menu.
+    Devuelve: no devuelve ningun valor.
+    '''
 
     print()
     print('TACOS')
@@ -75,28 +102,37 @@ def Mostrar_Carta(tacos, tamaños_aguas, complementos) :
     print('Guacamole (GUA) -------------- $40')
     print('Frijoles (FRI) --------------- $20')
 
-    Mostrar_Menu(tacos, tamaños_aguas, complementos)
-
-# -----------------Función con inputs para realizar el pedido------------------
+    Mostrar_Menu()
 
 def Realizar_Pedido(tacos, tamaños_aguas, complementos):
 
+    '''
+    (Uso de operadores, ciclos while anidados, condicionales anidados, listas,
+    listas anidadas, diccionarios, funciones)
+    Recibe: tacos diccionario con precio de cada sabor de taco,
+            tamaños_aguas diccionario con precios de cada tamaño de agua,
+            complementos diccionario con precios de cada complemento
+    Función con inputs para realizar el pedido. Utiliza ciclos y
+    condicionales para la verificación de los inputs del usuario. Después de
+    realizar el pedido, hace uso de la función Confirmacion_Pedido para
+    imprimir la confirmación y cuenta total del pedido. Si no hace algún otro
+    pedido, regresa al menú.
+    Devuelve: no devuelve ningun valor.
+    '''
+
     total_pedido = 0  # Inicializamos el total del pedido en cero
 
-    print()
-    print(
-    'FAVOR DE UTILIZAR LOS CÓDIGOS DE CADA PRODUCTO PARA REALIZAR SU PEDIDO',
-          '(E.G. Taco de Pastor: PA)')
-
-    # Ciclos while True, condicionales if y try/excpet para la verificación de
-    # las respuestas del usuario.
-
     while True:
+        print()
+        print(
+        'FAVOR DE UTILIZAR LOS CÓDIGOS DE CADA PRODUCTO PARA REALIZAR SU PEDIDO',
+              '(E.G. Taco de Pastor: PA)')
+        print()
         taco_o_no = input('¿Desea agregar tacos a su orden? ')
-        if taco_o_no.lower() == 'si':
+        if (taco_o_no.lower() == 'si') :
             while True :
                 sabor_taco = input('Sabor de taco: ')
-                if sabor_taco not in productos[0] :
+                if (sabor_taco not in productos[0]) :
                     print('Código inválido, intente de nuevo.')
                 else :
                     while True :
@@ -113,15 +149,15 @@ def Realizar_Pedido(tacos, tamaños_aguas, complementos):
             cantidad_tacos = 0
 
         agua_o_no = input('¿Desea agregar alguna bebida a su orden? ')
-        if agua_o_no.lower() == 'si':
+        if (agua_o_no.lower() == 'si') :
             while True :
                 sabor_agua = input('Sabor de agua: ')
-                if sabor_agua not in productos[1] :
+                if (sabor_agua not in productos[1]) :
                     print('Código inválido, intente de nuevo.')
                 else :
                     while True :
                         tamaño_agua = input('Tamaño del agua: ')
-                        if tamaño_agua not in lista_tamaños_aguas :
+                        if (tamaño_agua not in lista_tamaños_aguas) :
                             print('Código inválido, intente de nuevo.')
                         else :
                             while True :
@@ -141,10 +177,10 @@ def Realizar_Pedido(tacos, tamaños_aguas, complementos):
             cantidad_agua = 0
 
         extra_o_no = input('¿Deseas agregar algún complemento? ')
-        if extra_o_no.lower() == 'si':
+        if (extra_o_no.lower() == 'si'):
             while True :
                 extra = input('Complemento: ')
-                if extra not in productos[2] :
+                if (extra not in productos[2]) :
                     print('Código inválido, intente de nuevo.')
                 else :
                     total_pedido += complementos.get(extra, 0)
@@ -153,7 +189,7 @@ def Realizar_Pedido(tacos, tamaños_aguas, complementos):
             extra = None
 
         propina = input('¿Deseas agregar propina? ')
-        if propina.lower() == 'si':
+        if (propina.lower() == 'si') :
             while True :
                 try :
                     print('¿Cuánto deseas agregar?')
@@ -175,78 +211,94 @@ def Realizar_Pedido(tacos, tamaños_aguas, complementos):
         # Pregunta si desea agregar más elementos al pedido
         continuar_pedido = input(
         '¿Desea agregar más elementos al pedido? (si/no) ')
-        if continuar_pedido.lower() != 'si':
+        if (continuar_pedido.lower() != 'si') :
             break
+        else :
+            continue
 
-        Mostrar_Menu(tacos, tamaños_aguas, complementos)
+        Mostrar_Menu()
 
 def Finalizar_Pedido() :
 
-    # Función que imprime un mensaje de confirmación, y además muestra la
-    # encuesta de servicio, donde se calificará el servicio en una escala
-    # del 1 al 5.
+    '''
+    (Uso de ciclo while, condicionales, funciones)
+    Recibe: no recibe ningún valor.
+    Imprime un mensaje de confirmación, muestra la encuesta de servicio, donde
+    se calificará el servicio en una escala del 1 al 5, y sale del programa.
+    Devuelve: no devuelve ningun valor.
+    '''
 
     while True :
         print('¡Gracias por su compra! Su pedido pronto estará listo.')
         calif = input(
         'Por favor, en una escala del 1 al 5 califique el servicio: ')
-        if calif == '1' :
+        if (calif == '1') :
             print('En su próximo pedido prometemos un mejor servicio.')
             exit()
-        if calif == '2' :
+        if (calif == '2') :
             print('En su próximo pedido prometemos un mejor servicio.')
             exit()
-        if calif == '3' :
+        if (calif == '3') :
             print('Gracias por calificar nuestro servicio.')
             exit()
-        if calif == '4' :
+        if (calif == '4') :
             print('Gracias por calificar nuestro servicio.')
             exit()
-        if calif == '5' :
+        if (calif == '5') :
             print('¡Gracias! Nos da gusto que hayas recibido un buen servicio.')
             exit()
         else :
             print('Número inválido, intenta de nuevo.')
-
-# ---------------Función que imprime la confirmación del pedido----------------
 
 def Confirmacion_Pedido(tacos, tamaños_aguas, complementos,
 nombres_c, nombres_t, nombres_t_a, sabor_taco, sabor_agua, tamaño_agua, extra,
 cantidad_agua, cantidad_tacos, propina, porcentaje, total_pedido,
 aguas) :
 
-    # Uso de la función get() para obtener los valores/precios de los productos
-    # y los nombres de los códigos.
+    '''
+    (Uso de condicionales, funciones)
+    Recibe: tacos diccionario con precio de cada sabor de taco,
+            tamaños_aguas diccionario con precios de cada tamaño de agua,
+            complementos diccionario con precios de cada complemento,
+            variables de tipo entero y cadenas
+    Imprime la confirmación y cuenta total del pedido.
+    Uso de la función get() para obtener los valores/precios de los productos
+    y los nombres de los códigos.
+    Devuelve: no devuelve ningun valor.
+    '''
 
     print()
     print('CONFIRMACIÓN: ')
-    if sabor_taco :
-        if cantidad_tacos > 1 :
+    if (sabor_taco) :
+        if (cantidad_tacos > 1) :
             print(cantidad_tacos, 'tacos de', nombres_t.get(sabor_taco, 0),
             '- $', tacos[sabor_taco] * cantidad_tacos)
-        elif cantidad_tacos == 1 :
+        elif (cantidad_tacos == 1) :
             print('Taco de', nombres_t.get(sabor_taco, 0), '- $',
             tacos[sabor_taco] * cantidad_tacos)
-    if tamaño_agua :
-        if cantidad_agua > 1 :
+    if (tamaño_agua) :
+        if (cantidad_agua > 1) :
             print(cantidad_agua, 'aguas',
             nombres_t_a.get(tamaño_agua, 0) + 's',
             'de', aguas.get(sabor_agua, 0), '- $',
             tamaños_aguas[tamaño_agua] * cantidad_agua)
-        elif cantidad_agua == 1 :
+        elif (cantidad_agua == 1) :
             print('Agua', nombres_t_a.get(tamaño_agua, 0), 'de',
             aguas.get(sabor_agua, 0),
             '- $', tamaños_aguas[tamaño_agua] * cantidad_agua)
-    if extra :
+    if (extra) :
         print(nombres_c.get(extra, 0), '- $', complementos[extra])
     else:
         print('Sin complemento')
-    if propina :
+    if (propina) :
         print('Propina:', porcentaje, '%')
     else :
         print('Cuenta cerrada')
     print('Total:', total_pedido)
 
+'''
+======================= Parte principal del programa ===========================
+'''
 print()
 print('-------------------------TAQUERÍA TEC-------------------------')
-Mostrar_Menu(tacos, tamaños_aguas, complementos)
+Mostrar_Menu()
